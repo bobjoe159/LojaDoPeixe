@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://seeklogo.com/images/S/Santos_Futebol_Clube-logo-B40F62AC4C-seeklogo.com.png"
+      type="image/x-icon"
+    />
+    <title>Loja do Peixe</title>
+  </head>
+  <body>
+    <div class="interruptor">
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="label" for="chk">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+    <header>
+      <nav class="menuHeader wrapper">
+        <div class="logoSantos">
+          <img
+            src="https://seeklogo.com/images/S/Santos_Futebol_Clube-logo-B40F62AC4C-seeklogo.com.png"
+            width="25"
+            height="25"
+          />
+          <a onclick="listarTodos()"><h1>Loja do Peixe</h1></a>
+        </div>
+        <div>
+          <ul class="listaHeader wrapper">
+            <li onclick="listarTodos()">Todos</li>
+            <li onclick="listarAcessorios()">Acessórios</li>
+            <li onclick="listarCalcados()">Calçados</li>
+            <li onclick="listarCamisetas()">Camisetas</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="mainContent wrapper">
+      <section class="itensShop">
+        <div class="cardsContent"></div>
+      </section>
+      <section class="shopCart">
+        <div class="search">
+          <input
+            class="cartInput"
+            type="text"
+            placeholder="Digite aqui sua pesquisa"
+          />
+          <button type="submit" class="searchButton">Pesquisar</button>
+        </div>
+        <div class="contentCart">
+          <h4>Carrinho de compras</h4>
+          <div class="itensCart"></div>
+          <div class="totalValue"></div>
+        </div>
+        <div class="wave">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#171717"
+              fill-opacity="1"
+              d="M0,96L120,106.7C240,117,480,139,720,133.3C960,128,1200,96,1320,80L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/998c60ef77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/modo-dark.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
