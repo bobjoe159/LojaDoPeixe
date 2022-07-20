@@ -261,6 +261,7 @@ header {
   background-color: white;
   color: rgb(23, 23, 23);
   align-items: center;
+  border-radius: 12px;
 }
 
 .infosCart {
