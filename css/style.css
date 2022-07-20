@@ -240,6 +240,7 @@ header {
 .itensCart {
   text-align: center;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 300px;
 }
 

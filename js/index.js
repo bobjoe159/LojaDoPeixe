@@ -67,10 +67,17 @@ function criarObjeto(event) {
   for (let i = 0; i < data.length; i++) {
     let numberProductId = data[i].id
     if (numberProduct == numberProductId) {
-      cart.push(data[i])
+      cart.unshift(data[i])
     }
   }
-  listarProdutosCart(cart)
+  if (btnCart.className == 'addCart') {
+    listarProdutosCart(cart)
+  }
+  if (cart.length > 0) {
+    let cartItem = document.querySelectorAll('.cartItem')[0]
+    cartItem.classList.add('animate__animated', 'animate__backInLeft')
+    cartItem.style.setProperty('--animate-duration', '0.3s')
+  }
 }
 
 // FUNÇÃO PARA LISTAR OS PRODUTOS NO CARRINHO //
@@ -135,14 +142,19 @@ itensCart.addEventListener('click', removerCart)
 function removerCart(event) {
   let buttonRemove = event.target
   let index = buttonRemove.id
+  let cartItem = document.querySelectorAll('.cartItem')[index]
   if (buttonRemove.className == 'removeButton') {
     cart.splice(index, 1)
+    cartItem.classList.add('animate__animated', 'animate__backOutRight')
+    cartItem.style.setProperty('--animate-duration', '0.6s')
   }
-  if (cart.length == 0) {
-    totalValue.innerHTML = `
-    <p class="noItens"> Sem itens no carrinho<p>`
-  }
-  listarProdutosCart(cart)
+  setTimeout(function () {
+    if (cart.length == 0) {
+      totalValue.innerHTML = `
+      <p class="noItens"> Sem itens no carrinho<p>`
+    }
+    listarProdutosCart(cart)
+  }, 200)
 }
 
 // ATUALIZANDO VALOR E QUANTIDADE DE ITENS NO CARRINHO //
@@ -186,9 +198,16 @@ function atualizarValor() {
   cartCleaner.addEventListener('click', limparCarrinho)
 
   function limparCarrinho() {
-    cart = []
     totalValue.innerHTML = `<p class="noItens"> Sem itens no carrinho<p>`
-    listarProdutosCart(cart)
+    for (let i = 0; i < cart.length; i++) {
+      let cartItem = document.querySelectorAll('.cartItem')[i]
+      cartItem.classList.add('animate__animated', 'animate__backOutRight')
+      cartItem.style.setProperty('--animate-duration', '0.6s')
+    }
+    setTimeout(function () {
+      cart = []
+      listarProdutosCart(cart)
+    }, 400)
   }
 }
 
