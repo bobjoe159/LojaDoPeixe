@@ -99,5 +99,14 @@ let data = [
     value: 29.9,
     addCart: 'Adicionar ao carrinho',
     tag: ['Acessórios']
+  },
+  {
+    id: 12,
+    img: './img/mascoteBaleia.png',
+    nameItem: 'Mascote de Pelúcia Santos FC',
+    description: 'Mascote Baleinha',
+    value: 49.9,
+    addCart: 'Adicionar ao carrinho',
+    tag: ['Acessórios']
   }
 ]
