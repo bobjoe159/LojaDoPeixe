@@ -5,11 +5,11 @@ const cardsContent = document.querySelector('.cardsContent')
 
 // FUNÇÃO PARA LISTAR TODOS OS PRODUTOS NA VITRINE //
 function listarProdutosVitrine(array) {
-  for (let i = 0; i < array.length; i++) {
-    let card = array[i]
-    let indice = i
+  array.forEach(function (i) {
+    let card = i
+    let indice = i.id
     criarCardVitrine(card, indice)
-  }
+  })
 }
 
 // FUNÇÃO PARA CRIAR O CARD DINÂMICO //
@@ -41,7 +41,7 @@ function criarCardVitrine(card, indice) {
   descriptionItem.innerHTML = `${description}`
   price.innerHTML = `R$ ${value}0`
   cart.innerHTML = `Adicionar ao carrinho`
-  cart.id = `${id + 1}`
+  cart.id = `${id}`
 
   divPrincipal.classList.add('card')
   divPrincipal.classList.add(tag)
@@ -154,7 +154,7 @@ function removerCart(event) {
       <p class="noItens"> Sem itens no carrinho<p>`
     }
     listarProdutosCart(cart)
-  }, 200)
+  }, 400)
 }
 
 // ATUALIZANDO VALOR E QUANTIDADE DE ITENS NO CARRINHO //

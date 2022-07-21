@@ -11,12 +11,6 @@ body {
   background: radial-gradient(circle, rgba(0,0,0,0.1516981792717087) 0%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%);
 }
 
-/* ADICIONANDO MODO ESCURO SIMPLES */
-
-body.dark {
-  background: radial-gradient(circle, rgba(0,0,0,0.8858718487394958) 0%, rgba(42,42,42,1) 57%, rgba(36,36,36,1) 100%);
-}
-
 ul {
   list-style: none;
 }
@@ -355,6 +349,12 @@ header {
   bottom: 0;
   left: 0;
   transform: translate(0%, 59%);
+}
+
+/* ADICIONANDO MODO ESCURO SIMPLES */
+
+body.dark {
+  background: radial-gradient(circle, rgba(0,0,0,0.8858718487394958) 0%, rgb(25, 25, 25) 57%, rgb(18, 18, 18) 100%);
 }
 
 .checkbox {
