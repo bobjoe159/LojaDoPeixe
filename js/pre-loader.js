@@ -6,5 +6,5 @@ const overlay = document.querySelector('.overlay')
 window.addEventListener('load', function () {
   setTimeout(() => {
     overlay.style.display = 'none'
-  }, 500)
+  }, 800)
 })
