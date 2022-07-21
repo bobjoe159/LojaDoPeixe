@@ -22,7 +22,7 @@ function criarCardVitrine(card, indice) {
   let id = indice
 
   let divPrincipal = document.createElement('div')
-  divPrincipal.classList.add('animate__animated', 'animate__slideInDown')
+  divPrincipal.classList.add('animate__animated', 'animate__fadeInLeft')
   divPrincipal.style.setProperty('--animate-duration', '2s')
   let img = document.createElement('img')
   let span = document.createElement('span')
