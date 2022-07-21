@@ -22,6 +22,8 @@ function criarCardVitrine(card, indice) {
   let id = indice
 
   let divPrincipal = document.createElement('div')
+  divPrincipal.classList.add('animate__animated', 'animate__slideInDown')
+  divPrincipal.style.setProperty('--animate-duration', '2s')
   let img = document.createElement('img')
   let span = document.createElement('span')
   let h3 = document.createElement('h3')
@@ -76,7 +78,7 @@ function criarObjeto(event) {
   if (cart.length > 0) {
     let cartItem = document.querySelectorAll('.cartItem')[0]
     cartItem.classList.add('animate__animated', 'animate__backInLeft')
-    cartItem.style.setProperty('--animate-duration', '0.3s')
+    cartItem.style.setProperty('--animate-duration', '0.6s')
   }
 }
 
