@@ -4,4 +4,4 @@ Sistema completo básico de loja, com filtro, busca, carrinho, limpar carrinho e
 Utilizei a biblioteca externa 'Animate.css' de JS neste trabalho.
 
 Projeto online:
-https://bobjoe159.github.io/LojaDoPeixe/
+https://pedrofeitosa97.github.io/LojaDoPeixe/
